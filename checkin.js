@@ -9,7 +9,7 @@ const umsmail = () => {
         method: 'get',
         url: `http://sup.umsin.com/OrderEmail.aspx?cgID=1`,
         params: {
-            text: `执行成功`
+            text: ``
         }
     })
 }
@@ -19,14 +19,15 @@ const stmail = () => {
         method: 'get',
         url: `http://sup.umsin.com/OrderEmail.aspx?cgID=2`,
         params: {
-            text: `执行成功`
+            text: ``
         }
     })
 }
 const GLaDOSCheckIn = async () => {
     umsmail();
+    console.log(`UMS执行成功`);
     stmail();
-    console.log(`执行成功`);
+    console.log(`ST执行成功`);
 }
 
 GLaDOSCheckIn();
